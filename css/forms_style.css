@@ -1,0 +1,266 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  /*отступ внутренний*/
+  margin: 0;
+  /*отступ внешний*/
+  border: 0;
+  /*отступ от края*/
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /*изменение подсчета ширины блока*/
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+/*убираем линии обводки у браузеров*/
+nav, footer, header, aside {
+  display: block;
+}
+
+/*добавляем HTML5 тегам значение блоков, делаем их блочными*/
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /*параметры уравнивающие поведение шрифтов и элементов для разных браузеров*/
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+/*наследование шрифтов элементами которые по умолчанию их не наследуют*/
+input::-ms-clear {
+  display: none;
+}
+
+/*убираем крестик в input*/
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/*убираем отступы*/
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/*чистим стили маркированных списков*/
+img {
+  vertical-align: top;
+}
+
+/*убираем особенности разных браузеров*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*обнуление всех заголовков*/
+/*---------------------------------------------*/
+body {
+  font-family: Gilroy;
+  font-style: normal;
+  background-color: #F6F6F6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: #242424;
+  margin: auto;
+}
+
+.form-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 525px;
+  padding: 30px 40px;
+  background-color: #fff;
+}
+
+.form-body__close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.form-body__title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 24px;
+  color: #242424;
+  color: #B3B3B3;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #EEBF3A;
+}
+
+.form-body__title2 {
+  padding-top: 16px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 20px;
+  color: #242424;
+  color: #242424;
+}
+
+.form-body__subtitle {
+  padding-top: 16px;
+  color: #6B6B6B;
+}
+
+.form-body__formplace {
+  padding-top: 32px;
+}
+
+.form-body__formplace p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6B6B6B;
+  padding-bottom: 2px;
+}
+
+.form-body__formplace textarea, .form-body input:hover {
+  border-color: #FFC41E;
+}
+
+.formplace__phonecontainer {
+  padding-top: 16px;
+}
+
+.formplace__phonelabel {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  color: #B3B3B3;
+}
+
+.formplace__radiocontainer {
+  padding-top: 19px;
+  color: #6B6B6B;
+}
+
+.formplace__radiocontainer input {
+  margin-right: 10px;
+}
+
+.formplace__infocontainer {
+  padding-top: 22px;
+}
+
+.formplace__input {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  color: #242424;
+  border: 1px solid #D6D6D6;
+  min-width: 445px;
+  padding: 9px 16px;
+  border-radius: 2px;
+}
+
+.formplace__contactus {
+  margin: 24px 0 32px;
+  color: #474747;
+}
+
+.formplace__submit {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 0 32px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFECB5), color-stop(0.01%, #FFE69F), to(#FFD45A));
+  background: linear-gradient(180deg, #FFECB5 0%, #FFE69F 0.01%, #FFD45A 100%);
+  -webkit-box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
+  border-radius: 58px;
+}
+
+.formplace__submit:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFEEBC), color-stop(36.46%, #FFE69F), color-stop(68.23%, #FFCF48), to(#FFC317));
+  background: linear-gradient(180deg, #FFEEBC 0%, #FFE69F 36.46%, #FFCF48 68.23%, #FFC317 100%);
+  -webkit-box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
+}
+
+.formplace__submit:active {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.01%, #FFE69F), color-stop(0.02%, #E3B940), to(#FFD24E));
+  background: linear-gradient(180deg, #FFE69F 0.01%, #E3B940 0.02%, #FFD24E 100%);
+  -webkit-box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
+}
+
+.formplace__reset {
+  float: right;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 40px;
+  padding: 0 32px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), to(#F6F6F6));
+  background: linear-gradient(180deg, #FBFBFB 0%, #F6F6F6 100%);
+  -webkit-box-shadow: 3px 3px 13px rgba(128, 128, 128, 0.25);
+          box-shadow: 3px 3px 13px rgba(128, 128, 128, 0.25);
+  border-radius: 58px;
+}
+
+.formplace__reset:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), color-stop(53.12%, #FFFFFF), to(#EFECEC));
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 53.12%, #EFECEC 100%);
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), 3px 3px 13px rgba(128, 128, 128, 0.25);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), 3px 3px 13px rgba(128, 128, 128, 0.25);
+}
+
+.formplace__reset:active {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1.56%, #F1F1F1), to(#FCFAFA));
+  background: linear-gradient(180deg, #F1F1F1 1.56%, #FCFAFA 100%);
+  -webkit-box-shadow: 3px 3px 13px rgba(128, 128, 128, 0.25), inset 0px 4px 13px rgba(0, 0, 0, 0.06);
+          box-shadow: 3px 3px 13px rgba(128, 128, 128, 0.25), inset 0px 4px 13px rgba(0, 0, 0, 0.06);
+}
+
+.formplace__autohelp-buttons {
+  padding-top: 32px;
+}
+
+.form-takeonsometime-text {
+  padding-bottom: 20px;
+}
