@@ -1,0 +1,87 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  /*отступ внутренний*/
+  margin: 0;
+  /*отступ внешний*/
+  border: 0;
+  /*отступ от края*/
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /*изменение подсчета ширины блока*/
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+/*убираем линии обводки у браузеров*/
+nav, footer, header, aside {
+  display: block;
+}
+
+/*добавляем HTML5 тегам значение блоков, делаем их блочными*/
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /*параметры уравнивающие поведение шрифтов и элементов для разных браузеров*/
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+/*наследование шрифтов элементами которые по умолчанию их не наследуют*/
+input::-ms-clear {
+  display: none;
+}
+
+/*убираем крестик в input*/
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/*убираем отступы*/
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/*чистим стили маркированных списков*/
+img {
+  vertical-align: top;
+}
+
+/*убираем особенности разных браузеров*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*обнуление всех заголовков*/
+/*---------------------------------------------*/

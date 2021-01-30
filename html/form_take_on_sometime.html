@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>забрать на передержку</title>
+    <link rel="stylesheet" href="../css/forms_style.css">
+    <link rel="stylesheet" href="../fonts/stylesheet.css">
+</head>
+<body>
+    <section class="form">
+        <div class="form-body">
+            <div class="form-body__header">
+                <div class="form-body__close">
+                    <a href="../index.html#our-wards"><img src="../img/form_close.svg" alt="закрыть окно"></a>
+                </div>
+                <h1 class="form-body__title">Забрать на передержку</h1>
+                <p class="form-body__subtitle">Оставьте информацию о себе. Мы позвоним вам и договоримся, когда вы сможете забрать себе питомца на передержку.</p>
+            </div>
+            <form class="form-body__formplace formplace" action="#">
+                <div class="formplace__namecontainer">
+                    <p>Фамилия и имя</p>
+                    <input class="formplace__input" type="text" placeholder="Введите ваше имя и фамилию" minlength="2" maxlength="56" required >
+                </div>
+                <div class="formplace__phonecontainer">
+                    <p>Номер телефона (только белорусский номер)</p>
+                    <input class="formplace__input" type="tel" name="phonenumber" id="" placeholder="Введите ваш номер телефона" min="9" pattern="^[ 0-9]+$" required>
+                    <label class="formplace__phonelabel">Обязательное поле для заполнения</label>
+                </div>
+                <div class="formplace__infocontainer">
+                    <p>Замечания</p>
+                    <textarea class="formplace__input" name="" id="" cols="30" rows="1" placeholder="Введите информацию, которая будет полезна нам" maxlength="500"></textarea>
+                </div>
+                <ul class="formplace__contactus">
+                    <li>Если у вас есть вопросы, можете позвонить нам:</li>
+                    <li>+375 (33) 6237879  Лена</li>
+                    <li>+375 (29) 7877791  Ольга</li>
+                    <li>+375 (29) 5837015  Рита</li>
+                </ul>
+                <div class="form-takeonsometime-text">
+                    <p class="form-takeonsometime-text__p1">Наши волонтеры будут активно искать будущий дом хвостику, пока вы помогаете нам с передержкой.</p>
+                    <p class="form-takeonsometime-text__p2">Спасибо за помощь!</p>
+                </div>
+                <input class="formplace__submit" type="submit" value="Отправить">
+                <input class="formplace__reset" type="reset" value="Отмена">
+            </form>
+        </div>
+    </section>
+</body>
+</html>

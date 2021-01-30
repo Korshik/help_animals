@@ -1,0 +1,352 @@
+@import "nullstyle.scss";
+
+//введение сокращений для часто используемых цветов
+$gray2:#242424;
+$gray3:#474747;
+$gray4:#6B6B6B;
+$gray5:#8F8F8F;
+$gray6:#B3B3B3;
+$gray7:#D6D6D6;
+$rederror:#B40000;
+$orange:#D06400;
+$dirtyyellow:#AD7F00;
+$yellow:#FFC41E;
+$background: #F6F6F6;
+
+
+//миксины для назначения параметров шрифта
+@mixin H3SemiBold {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    color: #C78100;
+}
+@mixin Textmdnormal {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: $gray2;
+}
+@mixin H3light {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 24px;
+    color: $gray2;
+}
+@mixin Textmdmedium {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: $gray3;
+}
+@mixin H3medium28 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 24px;
+    color: $gray2;
+}
+@mixin H4medium {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 20px;
+    color: $gray2;
+}
+@mixin Textsmmedium {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray4;
+}
+@mixin Textlnormal {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: $gray2;
+}
+@mixin Textlmedium {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: $gray4;
+}
+
+
+
+// параметр для всех заголовков третьего порядка
+h3 {
+    @include H3medium28;
+}
+
+
+//работа с контентом сайта
+.pagebody {
+    margin: auto;
+    max-width: 1366px;
+    font-family: Gilroy;
+    font-style: normal;
+    background-color: #E5E5E5;
+}
+
+//общие параметры для стиля кнопки (образец 1)
+.button1 {
+    padding: 5px 33px 5px 32px;
+    border-radius: 58px;
+    background-color: #FBC832;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    background: linear-gradient(180deg, #FFECB5 0%, #FFE69F 0.01%, #FFD45A 100%);
+    box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
+    a {
+        color: black;
+    }
+}
+.button1:hover {
+    background: linear-gradient(180deg, #FFEEBC 0%, #FFE69F 36.46%, #FFCF48 68.23%, #FFC317 100%);
+    box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
+}
+.button1:active {
+    background: linear-gradient(180deg, #FFE69F 0.01%, #E3B940 0.02%, #FFD24E 100%);
+    box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
+}
+
+.our-wards {
+    background-color: $background;
+    padding-top: 72px;
+
+}
+.ourwards {
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 8%; 
+    }
+
+    &__back {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+
+    }
+    &__back img {
+        padding-right: 8px;
+    }
+    &__back a {
+        text-decoration: none;
+        color: $gray4;
+    }
+
+	&__text-area {
+        @include H3SemiBold;
+        text-align: center;
+        color: black;
+    }
+    
+    &__show-settings {
+        display: flex;
+        align-items: center;
+    }
+
+    &__show-settings p {
+        @include Textmdnormal;
+        color: $gray4;
+        padding-right: 8px;
+    }
+
+    &__settings {
+        @include Textsmmedium;
+        padding: 8px 16px;
+    }
+}
+
+//галлерея
+.gallery {
+
+    &__row {
+        //margin: 0 6.5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__column {
+        background-color: #fff;
+        margin: 32px 10px 0 10px;
+        max-width: 368px;
+    }
+
+    &__column-body {
+        max-height: 555px;
+        padding: 16px;
+    }
+
+    &__image {
+        max-width: 335px;
+        max-height: 356px;
+    }
+
+    &__title {
+        padding: 8px 0 10px 0;
+        border-bottom: 1px solid $gray7;
+        @include H4medium;
+        text-align: center;
+    }
+
+    &__subtitle {
+        padding-top: 8px;
+        @include Textsmmedium;
+    }
+
+    &__text {
+        min-height: 95px;
+        margin-top: 6px;
+        @include Textsmmedium;
+        color: $gray2;
+    }
+
+    &__button1 {
+        margin: 35px 0 0 80px;
+    }
+
+    &__button1-text {
+        color: $gray2;
+    }
+
+    &__button2 {
+        margin: 17px 0 20px 36px;
+    }
+
+    &__button2-text {
+        color: $gray2;
+    }
+
+    &__link {
+        margin-top: 20px;
+    }
+
+    &__linkgallery {
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 40px;
+        text-decoration-line: underline;
+        color: $gray3;
+    }
+
+    &__linkgallery:hover {
+        text-decoration-line: underline;
+        color: $dirtyyellow;
+    }
+
+    &__linkgallery:active {
+        text-decoration-line: underline;
+        color: $gray3;
+    }
+
+    &__footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 76px;
+    }
+
+    &__socialicons {
+        display: flex;
+        padding: 65px 38px 0;
+    }
+
+    &__socialicons div {
+        background: linear-gradient(145.67deg, #FFFFFF 15.39%, #E4E4E4 88.3%);
+        box-shadow: 3px 3px 13px #B1B1B1;
+    }
+
+    &__socialicons div:hover {
+        background: linear-gradient(145.67deg, #FFFFFF 15.39%, #FAFAFA 54.13%, #DADADA 88.3%);
+        box-shadow: 3px 3px 13px #A3A3A3;
+    }
+
+    &__socialicons div:active {
+        background: linear-gradient(145.67deg, #E4E4E4 16.92%, #F6F6F6 88.3%);
+        box-shadow: 3px 3px 13px #B2B2B2, inset 4px 4px 7px rgba(192, 192, 192, 0.25);
+    }
+
+    &__socialicons-text {
+        max-width: 583px;
+        padding-top: 65px;
+        @include Textlnormal;
+    }
+
+}
+
+//общий стиль для 2 типа кнопки
+.button2 {
+padding: 5px 33px 5px 32px;
+background: linear-gradient(180deg, #FBFBFB 0%, #F6F6F6 100%);
+box-shadow: 3px 3px 13px rgba(128, 128, 128, 0.25);
+border-radius: 58px;
+background-color: #ffffff00;
+font-weight: 500;
+font-size: 20px;
+line-height: 40px;
+}
+.button2:hover {
+background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 53.12%, #EFECEC 100%);
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), 3px 3px 13px rgba(128, 128, 128, 0.25);
+}
+.button2:active {
+background: linear-gradient(180deg, #F1F1F1 1.56%, #FCFAFA 100%);
+box-shadow: 3px 3px 13px rgba(128, 128, 128, 0.25), inset 0px 4px 13px rgba(0, 0, 0, 0.06);
+}
+
+//12 секция футер сайта
+.mainfooter {
+    background-color: $background;
+}
+
+.mainfooter a {
+    color: $gray3;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: underline;
+}
+
+.mainfooter a:hover {
+    color: $dirtyyellow;
+}
+
+.mainfooter a:active {
+    color: $gray3;
+}
+
+.main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 40px;
+
+    //&__linksgroup1 {
+    //}
+
+    &__links {
+        padding: 0 20px;
+    }
+
+    &__linksgroup2 {
+        padding-left: 102px;
+    }
+}
+
+.sertificate {
+    padding-top: 24px;
+    padding-bottom: 16px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 140%;
+    color: $gray6;
+}
